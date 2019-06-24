@@ -1,6 +1,9 @@
 resource "aws_iam_service_linked_role" "ecs_asg_srv_role" {
 	aws_service_name = "autoscaling.amazonaws.com"
 	custom_suffix = "${var.ecs_cluster_name}"
+	lifecycle {
+	 ignore_changes = ["custom_suffix"]
+	}
 }
 
 data "aws_iam_policy_document" "ecs_asg_doc"{

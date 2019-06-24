@@ -17,7 +17,7 @@ resource "aws_lb" "tf-ecs-alb" {
 	name = "ECS-ApplicationLoadBalancer"
 	internal = false
 	load_balancer_type = "application"
-	security_groups = ["${aws_security_group.priv_access.id}"]
+	security_groups = ["${aws_security_group.alb_sec_grp.id}"]
 	subnets = ["${aws_subnet.public_tf_subnet.id}", "${aws_subnet.public_tf_subnet_2.id}"]
 	ip_address_type = "ipv4"
 }
