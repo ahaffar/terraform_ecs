@@ -1,0 +1,12 @@
+[ {
+	"name":	"nginx-webserver",
+	"image": "070775348724.dkr.ecr.us-east-2.amazonaws.com/webserver:latest",
+	"memoryReservation": 300,
+	"cpu": 256,
+	"essential": true,
+	"portMappings": [ {
+	 "containerPort": 80,
+	 "hostPort": 0,
+	 "protocol": "tcp"
+	} ] 
+} ]
