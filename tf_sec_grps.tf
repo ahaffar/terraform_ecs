@@ -16,4 +16,11 @@ resource "aws_security_group" "priv_access" {
 	 from_port  = 0
 	}
 
+	ingress {
+	 cidr_blocks = ["0.0.0.0/0"]
+	 to_port = "80"
+	 protocol= "tcp"
+	 from_port = 0
+	}
+
 }

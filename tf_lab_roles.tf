@@ -1,7 +1,6 @@
 resource "aws_iam_service_linked_role" "ecs_asg_srv_role" {
 	aws_service_name = "autoscaling.amazonaws.com"
-	custom_suffix = "terraformASG"
-	# custom_suffix = "${var.ecs_cluster_name}" TODO
+	custom_suffix = "${var.ecs_cluster_name}"
 }
 
 data "aws_iam_policy_document" "ecs_asg_doc"{

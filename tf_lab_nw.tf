@@ -17,9 +17,18 @@ resource "aws_subnet" "private_tf_subnet" {
 resource "aws_subnet" "public_tf_subnet" {
 	vpc_id = "${aws_vpc.tf-lab.id}"
 	cidr_block = "${var.public_cidr}"
-
+	availability_zone = "${var.azs[0]}"
 	tags = {
-	 Name = "Public main-tf subnet"
+	 Name = "Public main-tf subnet 01"
+	}
+}
+
+resource "aws_subnet" "public_tf_subnet_2" {
+	vpc_id = "${aws_vpc.tf-lab.id}"
+	cidr_block = "${var.public_subnet_02}"
+	availability_zone = "${var.azs[1]}"
+	tags = {
+	 Name = "Public sunet 02"
 	}
 }
 
@@ -78,6 +87,12 @@ resource "aws_route_table_association" "tf_public_rta" {
         subnet_id = "${aws_subnet.public_tf_subnet.id}"
         route_table_id = "${aws_route_table.tf_public_rt.id}"
 }
+
+resource "aws_route_table_association" "tf_public_rta_02" {
+        subnet_id = "${aws_subnet.public_tf_subnet_2.id}"
+        route_table_id = "${aws_route_table.tf_public_rt.id}"
+}
+
 
 resource "aws_security_group" "ssh_access" {
 	vpc_id = "${aws_vpc.tf-lab.id}"

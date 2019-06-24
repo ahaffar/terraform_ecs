@@ -5,11 +5,11 @@ variable "aws_instance_type" {
 	default = "t2.micro"
 }
 variable "aws_access_key" {
-	default = "AKIAIDJAL73EX6ZJC6PQ"
+	default = ""
 }
 
 variable "aws_secret_key" {
-	default = "359W19GDPA1EIzw9VkU82Q+ytMS9OW1M/gJyRciM"
+	default = ""
 }
 
 variable ec2_key_pair {
@@ -47,4 +47,14 @@ variable "private_cidr" {
 variable "public_cidr" {
 	type = "string"
 	default = "172.16.238.64/26"
+}
+
+variable "public_subnet_02" {
+	type = "string"
+	default = "172.16.238.128/26"
+}
+
+variable "azs" {
+	type = "list"
+	default = ["us-east-2a", "us-east-2b"]
 }
