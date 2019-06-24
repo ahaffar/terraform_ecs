@@ -11,8 +11,8 @@ This is still under development, the complete/pending tasks are shown below, thi
  - [x] Create A VPC: this VPC include - IGW , NAT GW, Private Subnet, Security Groups, Public Subnet and thier associated routes
  - [x] Create the required IAM roles and service-linked roles
  - [x] Create the AWS Launch configuration and the associated AutoScalingGroups
- - [ ] Define the Task Defention
- - [ ] Create the Service and ALB - Application Load Balancer
+ - [x] Define the Task Defention
+ - [x] Create the Service and ALB - Application Load Balancer
 
 # HOW TO USE
  * **DONT** use the root user, its recommended to explore the IAM roles and delegate the specific needed roles to a new user account
