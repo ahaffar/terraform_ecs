@@ -10,7 +10,8 @@
 *.tfstate
 *.tfstate.*
 *.tf.backup
-
+terraform.tf # backend providor 
+*.tf.swp # corrupted swp files 
 # Crash log files
 crash.log
 
