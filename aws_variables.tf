@@ -58,3 +58,7 @@ variable "azs" {
 	type = "list"
 	default = ["us-east-2a", "us-east-2b"]
 }
+
+data "aws_availability_zones" "azs" {
+	state = "available"
+}

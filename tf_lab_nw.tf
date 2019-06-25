@@ -8,7 +8,7 @@ resource "aws_vpc" "tf-lab" {
 resource "aws_subnet" "private_tf_subnet" {
 	vpc_id = "${aws_vpc.tf-lab.id}"
 	cidr_block = "${var.private_cidr}"
-	
+	availability_zone = "${data.aws_availability_zones.azs.names[0]}"	
 	tags = {
 	  Name = "Priavte main-tf subnet"
 	}
@@ -17,7 +17,8 @@ resource "aws_subnet" "private_tf_subnet" {
 resource "aws_subnet" "public_tf_subnet" {
 	vpc_id = "${aws_vpc.tf-lab.id}"
 	cidr_block = "${var.public_cidr}"
-	availability_zone = "${var.azs[0]}"
+	#availability_zone = "${var.azs[0]}"
+	availability_zone = "${data.aws_availability_zones.azs.names[0]}"
 	tags = {
 	 Name = "Public main-tf subnet 01"
 	}
@@ -26,7 +27,8 @@ resource "aws_subnet" "public_tf_subnet" {
 resource "aws_subnet" "public_tf_subnet_2" {
 	vpc_id = "${aws_vpc.tf-lab.id}"
 	cidr_block = "${var.public_subnet_02}"
-	availability_zone = "${var.azs[1]}"
+	#availability_zone = "${var.azs[1]}"
+	availability_zone = "${data.aws_availability_zones.azs.names[1]}"
 	tags = {
 	 Name = "Public sunet 02"
 	}

@@ -1,4 +1,4 @@
-resource "aws_security_group" "priv_access" {
+resource "aws_security_group" "alb_access" {
 	vpc_id = "${aws_vpc.tf-lab.id}"
 	name = "tf_lab security groups"
 	
