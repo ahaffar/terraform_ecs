@@ -4,7 +4,6 @@ resource "aws_launch_configuration" "ec2_config" {
 	key_name = "${var.ec2_key_pair}"
 	security_groups = ["${aws_security_group.alb_access.id}"]
 	user_data = "${data.template_file.ecs_cluster_name.rendered}"
-	associate_public_ip_address = true
 	iam_instance_profile = "${aws_iam_instance_profile.test_profile.id}"
 	
 	lifecycle {

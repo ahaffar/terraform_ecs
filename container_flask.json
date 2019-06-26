@@ -1,0 +1,12 @@
+[{
+	 "name" : "flask_app",
+	 "cpu" : 256,
+	 "essential" : true,
+	 "image" : "070775348724.dkr.ecr.us-east-2.amazonaws.com/flask_app:latest",
+	 "memoryReservation" : 300,
+	 "portMappings" :  [ {
+	  "containerPort" : 5000,
+	  "hostPort" : 0,
+	  "protocol" : "tcp"
+	  } ] 
+}]
