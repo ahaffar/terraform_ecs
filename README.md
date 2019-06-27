@@ -21,6 +21,9 @@ below is a HLD represents the deployment
  - [x] Create the AWS Launch configuration and the associated AutoScalingGroups
  - [x] Define the Task Defention
  - [x] Create the Service and ALB - Application Load Balancer
+    * <public dns_name>:8088 - listening on the Flask web server
+    * <public dns_name> - listening on the nginx server
+ - [x] Create Managment server hosted on public subnet in order to manage the internal container instances
 
 # HOW TO USE
  * **DONT** use the root user, its recommended to explore the IAM roles and delegate the specific needed roles to a new user account
