@@ -11,7 +11,7 @@ below is a HLD represents the deployment
 ## HLD - High Level Diagram
 
 <p align="center">
-  <img width="800" height="1024" src="https://github.com/ahaffar/terraform_ecs/blob/master/AWS%20ECS.png/800/1024">
+  <img width="800" height="1024" src="https://github.com/ahaffar/terraform_ecs/blob/master/AWS%20ECS.png">
 </p>
 
 # TASKS
