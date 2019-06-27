@@ -4,7 +4,15 @@ Tools: AWS, Terraform
 ---
 
 # OVERVIEW
-This is still under development, the complete/pending tasks are shown below, this repro is to create a full AWS ECS with Terraform.
+This LAB represents an AWS Elastic Container Services enviroment - i have created this repo while learning / working on my first task in AWS cloud.  
+below is a HLD represents the deployment
+
+
+## HLD - High Level Diagram
+
+<p align="center">
+  <img width="800" height="1024" src="https://github.com/ahaffar/terraform_ecs/blob/master/AWS%20ECS.png/800/1024">
+</p>
 
 # TASKS
  - [x] Create the required variables file, this file include all the hard-coded values used in the entire project
