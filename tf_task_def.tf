@@ -11,7 +11,7 @@ resource "aws_ecs_task_definition" "nginx-def" {
 resource "aws_ecs_service" "nginx-service" {
 	name = "nginx-webserver"
 	task_definition = "${aws_ecs_task_definition.nginx-def.arn}"
-	desired_count = 2
+	desired_count = 1
 	launch_type = "EC2"
 	cluster = "${aws_ecs_cluster.terraform_ecs_cluster.arn}"
 	scheduling_strategy = "REPLICA"
@@ -37,7 +37,7 @@ resource "aws_ecs_task_definition" "flask-app" {
 resource "aws_ecs_service" "flask-app-srv" {
 	name = "flask-service"
 	task_definition = "${aws_ecs_task_definition.flask-app.arn}"
-	desired_count = 2
+	desired_count = 1
 	launch_type = "EC2"
 	cluster = "${aws_ecs_cluster.terraform_ecs_cluster.arn}"
 	iam_role = "${aws_iam_role.ecs_service_role.arn}"

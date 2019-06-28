@@ -43,6 +43,7 @@ resource "aws_lb_target_group" "flask-app" {
 	 path = "/"
 	 port = "traffic-port"
 	}
+	depends_on = ["aws_lb.tf-ecs-alb"]
 }
 
 resource "aws_lb_listener" "flask-app-lsn" {

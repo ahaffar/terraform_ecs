@@ -4,9 +4,22 @@
 	 "essential" : true,
 	 "image" : "070775348724.dkr.ecr.us-east-2.amazonaws.com/flask_app:latest",
 	 "memoryReservation" : 300,
+	 "links" : ["redis-db"],
 	 "portMappings" :  [ {
 	  "containerPort" : 5000,
 	  "hostPort" : 0,
 	  "protocol" : "tcp"
 	  } ] 
+},
+{
+	"name" : "redis-db",
+	"image" : "redis",
+	"essential" : true,
+	"memoryReservation" : 150,
+	"cpu" : 256,
+	"portMappings" : [{
+	 "containerPort" : 6379,
+	 "hostPort" : 6379,
+	 "protocol" : "tcp"
+	}]
 }]
