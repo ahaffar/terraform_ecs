@@ -1,5 +1,5 @@
 ---
-description: ECS with load-balanced simple Web App
+description: ECS with load-balanced Mutiple Application Containers
 Tools: AWS, Terraform
 ---
 
@@ -19,9 +19,9 @@ below is a HLD represents the deployment
  - [x] Create A VPC: this VPC include - IGW , NAT GW, Private Subnet, Security Groups, Public Subnet and thier associated routes
  - [x] Create the required IAM roles and service-linked roles
  - [x] Create the AWS Launch configuration and the associated AutoScalingGroups
- - [x] Define the Task Defention
+ - [x] Define the Task Defention, Services and Integrate it with ALB
  - [x] Create the Service and ALB - Application Load Balancer
-    * `http://public dns_name:8088` - listening on the Flask web server
+    * `http://public dns_name:8080` - listening on the Flask web server - this App is used in a muti-container enviroment
     * `http://public dns_name` - listening on the nginx server
  - [x] Create Managment server hosted on public subnet in order to manage the internal container instances
 
