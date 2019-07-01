@@ -8,5 +8,4 @@ jobs:
       - checkout # Checks out the source code
       - run: 
         name: hellow_world
-        command: |
-         echo "Hello World!"
+        command: echo "Hello World!"
