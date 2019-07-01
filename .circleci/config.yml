@@ -7,6 +7,6 @@ jobs:
     steps:
       - checkout # Checks out the source code
       - run: 
-	 name: hellow_world
-	 command: |
-	  echo "Hello World!"
+        name: hellow_world
+        command: |
+         echo "Hello World!"
