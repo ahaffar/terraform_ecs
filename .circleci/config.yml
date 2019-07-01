@@ -1,4 +1,4 @@
-veriosn 2.0
+veriosn: 2.0
 jobs: 
   build: 
     docker: 
