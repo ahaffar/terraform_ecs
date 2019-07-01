@@ -1,13 +1,12 @@
-veriosn: 2.0
-jobs: 
-  build: 
-    docker: 
-     - image: circleci/node:4.8.2
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:4.8.2
     working_directory: /infra
-    steps: 
-      - checkout # check out the source code
+    steps:
+      - checkout # Checks out the source code
       - run: 
-       name: a simple hellow world job
-       command: |
- 	echo "Hello, World!"
-  
+	 name: hellow_world
+	 command: |
+	  echo "Hello World!"
